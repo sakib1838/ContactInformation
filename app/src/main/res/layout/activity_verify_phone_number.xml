@@ -24,7 +24,7 @@
     </LinearLayout>
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/cardView"
+        android:id="@+id/cardViewVerifyPhone"
         android:layout_width="330dp"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -38,6 +38,7 @@
             android:orientation="vertical">
 
             <TextView
+                android:id="@+id/textViewConfirmPhone"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
@@ -51,13 +52,16 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
+                app:errorEnabled="true"
                 android:hint="Phone Number">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/textInputEditTextVerifyPhone"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:inputType="number" />
+                    android:inputType="phone"
+                    android:digits="0123456789"
+                    />
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -68,7 +72,7 @@
                 android:orientation="vertical">
 
                 <com.google.android.material.button.MaterialButton
-                    android:id="@+id/buttonNext"
+                    android:id="@+id/btnGoAhead"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"

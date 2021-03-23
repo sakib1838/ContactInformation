@@ -69,7 +69,7 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/textForgotPassword"
+                    android:id="@+id/textViewForgotPassword"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Forget Password?"
@@ -82,6 +82,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="6dp"
+                app:passwordToggleEnabled="true"
+                app:passwordToggleTint="@color/purple_500"
                 android:hint="পাসওয়ার্ড">
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -100,7 +102,7 @@
                 android:orientation="vertical">
 
                 <com.google.android.material.button.MaterialButton
-                    android:id="@+id/buttonSignInFragment"
+                    android:id="@+id/btnSignIn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="6dp"
@@ -125,7 +127,7 @@
         app:layout_constraintVertical_bias="0.228">
 
         <TextView
-            android:id="@+id/textViewSignUpFragment"
+            android:id="@+id/textViewSignUpInSignIn"
             android:layout_width="wrap_content"
             android:textAlignment="center"
             android:layout_height="wrap_content"
