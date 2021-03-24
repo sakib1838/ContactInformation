@@ -165,7 +165,7 @@ public class SignUpActivity extends AppCompatActivity {
                                         })
                                         .show();
                             }else{
-                                new MaterialAlertDialogBuilder(getApplicationContext())
+                                new MaterialAlertDialogBuilder(SignUpActivity.this)
                                         .setTitle("Error")
                                         .setMessage("Cannot Register at this moment")
                                         .setNegativeButton("Ok",null)
@@ -186,7 +186,7 @@ public class SignUpActivity extends AppCompatActivity {
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
-                new MaterialAlertDialogBuilder(getApplicationContext())
+                new MaterialAlertDialogBuilder(SignUpActivity.this)
                         .setTitle("Error")
                         .setMessage(error.toString())
                         .setNegativeButton("Ok",null)
@@ -198,9 +198,10 @@ public class SignUpActivity extends AppCompatActivity {
     }
 
     private void showDialog(){
-        this.progressDialog= new ProgressDialog(this);
+        this.progressDialog= new ProgressDialog(SignUpActivity.this);
         progressDialog.setCancelable(true);
         progressDialog.setTitle("This takes a few moments");
+        progressDialog.show();
     }
 
 }

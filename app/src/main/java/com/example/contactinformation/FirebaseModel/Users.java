@@ -15,6 +15,10 @@ public class Users {
         Role = role;
     }
 
+    public Users(){
+
+    }
+
     public String getPhoneNumber() {
         return PhoneNumber;
     }
