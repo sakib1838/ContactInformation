@@ -97,11 +97,12 @@ public class SignInActivity extends AppCompatActivity {
                     Users users = snapshot.child(phone).getValue(Users.class);
 
                     if(users.getPhoneNumber().equals(phone) && users.getPassword().equals(password)){
-                        new MaterialAlertDialogBuilder(SignInActivity.this)
-                                .setTitle("Success")
-                                .setMessage("User Exists")
-                                .setNegativeButton("Ok",null)
-                                .show();
+                        startActivity(new Intent(SignInActivity.this,MainActivity.class));
+//                        new MaterialAlertDialogBuilder(SignInActivity.this)
+//                                .setTitle("Success")
+//                                .setMessage("User Exists")
+//                                .setNegativeButton("Ok",null)
+//                                .show();
                         progressDialog.dismiss();
                     }else{
                         new MaterialAlertDialogBuilder(SignInActivity.this)
